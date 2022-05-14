@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  new_computer:
+    container_name: new_computer
+    build: .
+    volumes:
+      - "./nvim:/home/wesbragagt/.config/nvim"
+      - "./Makefile:/home/wesbragagt/Makefile"
+    tty: true
+    stdin_open: true
+    entrypoint: /bin/bash
