@@ -4,8 +4,10 @@ services:
     container_name: new_computer
     build: .
     volumes:
-      - "./nvim:/home/wesbragagt/.config/nvim"
-      - "./Makefile:/home/wesbragagt/Makefile"
+      - "./.config:/home/user/.config"
+      - "./Makefile:/home/user/Makefile"
+      - "./test-project:/home/user/dev/test_project"
+      - "./setup.sh:/home/user/setup.sh"
     tty: true
     stdin_open: true
-    entrypoint: /bin/bash
+    entrypoint: /bin/sh

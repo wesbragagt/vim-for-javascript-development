@@ -1,5 +1,5 @@
 test:
-	docker compose down && docker compose up --build -d && docker compose exec new_computer bash
+	docker compose down && docker compose up --build -d && docker compose exec new_computer sh
 
 all:
 	ansible-playbook local.yml --ask-become-pass
